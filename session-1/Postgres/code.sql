@@ -14,7 +14,7 @@ SELECT
 FROM Employee;
 CREATE ROLE Analyst;
 GRANT SELECT ON Employee_View TO Analyst;
---G3_23BCS10285_Geetansh
+
 
 
 ------2
@@ -47,4 +47,4 @@ SELECT DISTINCT salary
 FROM Employee
 ORDER BY salary DESC
 LIMIT 1 OFFSET 4-1;
---G3_23BCS10285_Geetansh
+
