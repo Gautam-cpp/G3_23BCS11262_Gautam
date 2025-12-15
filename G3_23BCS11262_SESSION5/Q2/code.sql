@@ -1,0 +1,21 @@
+
+CREATE TABLE Triangle (
+	x INT,
+	y INT,
+	z INT,
+	PRIMARY KEY (x, y, z)
+);
+
+
+INSERT INTO Triangle (x, y, z) VALUES
+(13, 15, 30),
+(10, 20, 15);
+
+
+SELECT * FROM(
+SELECT *,
+CASE WHEN x+y>z AND y+z>x AND z+x>y THEN 'YES'
+ELSE 'NO' END AS TRIANGLE_FORMED
+FROM Triange 
+)AS TEMP
+WHERE TRIANGLE_FORMED='YES';
